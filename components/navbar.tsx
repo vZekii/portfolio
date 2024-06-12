@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { CubeIcon, SunIcon, MoonIcon, Bars3Icon } from '@heroicons/react/24/outline';
 
-export default function Navbar({ projectRef }) {
+export default function Navbar({ projectRef }: { projectRef: React.RefObject<any> }) {
     const [dark, setDark] = React.useState(false);
 
     const darkModeHandler = () => {

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project }: { project: any }) {
     
     return (
             <article className="flex flex-col items-center lg:flex-row border border-gray-200 hover:bg-gray-100 shadow dark:border-slate-700 dark:hover:bg-slate-700 m-2 rounded-lg">
