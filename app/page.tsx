@@ -12,21 +12,25 @@ export default function Home() {
 
   const projects = [
     {
+      "id": 1,
       "title": "Smartwardrobe",
       "description": "A mobile application built with React Native that utilises a custom Deep Learning algorithm to suggest outfits based on what the user has scanned.",
       "image": "/images/image.png",
       "link": "/project1"
     },{
+      "id": 2,
       "title": "Project 2",
       "description": "This is a description of project 2",
       "image": "/images/image.png",
       "link": "/project2"
     },{
+      "id": 3,
       "title": "Project 3",
       "description": "This is a description of project 3",
       "image": "/images/image.png",
       "link": "/project3"
-      },{
+    },{
+      "id": 4,
       "title": "Project 4",
       "description": "This is a description of project 4",
       "image": "/images/image.png",
