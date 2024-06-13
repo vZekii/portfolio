@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Inter, Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 
@@ -24,6 +25,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
       <body className={`${sourceCodePro.variable} bg-slate-50 dark:bg-slate-800 scroll-smooth`}>
           {children}
           <Analytics />
+          <SpeedInsights />
       </body>
     </html>
   );
