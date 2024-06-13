@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   return (
-    <html lang="en">
-      <body className={`${sourceCodePro.variable} bg-slate-50 dark:bg-slate-800 scroll-smooth`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${sourceCodePro.variable} bg-slate-50 dark:bg-slate-800`}>
           {children}
           <Analytics />
           <SpeedInsights />
