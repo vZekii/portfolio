@@ -9,7 +9,7 @@ export default function ProjectCard({ project }: { project: any }) {
                     src={project.image}
                     width={250}
                     height={250}
-                    alt="Picture of the author"
+                    alt="Project picture"
                     className='object-cover w-full rounded-t-lg h-96 lg:h-auto lg:w-48 lg:rounded-none lg:rounded-s-lg'
                 />
                 <div className='p-4 flex flex-col justify-between leading-normal'>

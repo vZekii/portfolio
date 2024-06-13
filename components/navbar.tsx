@@ -41,14 +41,14 @@ export default function Navbar({ projectRef }: { projectRef: React.RefObject<any
 
             <nav className='align-middle justify-center items-center h-full space-x-1 hidden md:flex font-mono'>
                 <a href="/" className='font-bold text-sm bg-black dark:bg-white text-white dark:text-black rounded-full px-3 py-1'>Home</a>
-                <a className='font-light text-sm rounded-full px-3 py-1 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-white'
+                <a href="/" className='font-light text-sm rounded-full px-3 py-1 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-white'
                     onClick={() => {projectRef.current.scrollIntoView({
                         behavior: 'smooth',
                         block: 'nearest',
                         inline: 'center'
                       }); }}>Projects</a>
-                <a href="/blog" className='font-light text-sm rounded-full px-3 py-1 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-white'>Blog</a>
-                <a href="/contact" className='font-light text-sm rounded-full px-3 py-1 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-white'>Contact</a>
+                <a href="/" className='font-light text-sm rounded-full px-3 py-1 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-white'>Blog</a>
+                <a href="/" className='font-light text-sm rounded-full px-3 py-1 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-white'>Contact</a>
             </nav>
 
             <div className='flex align-middle items-center h-full absolute top-0 right-0 pr-2'>
