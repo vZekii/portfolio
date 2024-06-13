@@ -54,11 +54,11 @@ export default function Navbar({ projectRef }: { projectRef: React.RefObject<any
             <div className='flex align-middle items-center h-full absolute top-0 right-0 pr-2'>
                 <button className='p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700' onClick={() => darkModeHandler()}>
                     {
-                        dark ? <MoonIcon className="size-5 dark:text-white" /> : <SunIcon className="size-5 dark:text-white" />
+                        dark ? <MoonIcon className="size-5 dark:text-white" aria-label='dark mode'/> : <SunIcon className="size-5 dark:text-white" aria-label='light mode' />
                     }
                 </button>
                 <button className='p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 md:hidden'>
-                    <Bars3Icon className="size-5 dark:text-white" />
+                    <Bars3Icon className="size-5 dark:text-white" aria-label='open menu' />
                 </button>
 
             </div>
