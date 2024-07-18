@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import ProjectCard from "@/components/ProjectCard";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import { useRef } from 'react';
+import projects from "@/data/projects";
 
 
 export default function Home() {
@@ -12,38 +13,10 @@ export default function Home() {
   const blogRef = useRef<HTMLDivElement | null>(null);
   const contactRef = useRef<HTMLDivElement | null>(null);
 
-  const projects = [
-    {
-      "id": 1,
-      "title": "Smartwardrobe",
-      "description": "A mobile application built with React Native that utilises a custom Deep Learning algorithm to suggest outfits based on what the user has scanned.",
-      "image": "/images/image.png",
-      "link": "/project1"
-    },{
-      "id": 2,
-      "title": "Project 2",
-      "description": "This is a description of project 2",
-      "image": "/images/image.png",
-      "link": "/project2"
-    },{
-      "id": 3,
-      "title": "Project 3",
-      "description": "This is a description of project 3",
-      "image": "/images/image.png",
-      "link": "/project3"
-    },{
-      "id": 4,
-      "title": "Project 4",
-      "description": "This is a description of project 4",
-      "image": "/images/image.png",
-      "link": "/project4"
-    }
-  ];
-
   return (
-    <div className="mt-[--header-height] h-screen max-w-7xl m-auto">
+    <div className="mt-[--header-height] h-screen max-w-4xl m-auto">
       <Navbar homeRef={homeRef} projectRef={projectsRef} blogRef={blogRef} contactRef={contactRef}/>
-      <div ref={homeRef} className="p-4 lg:p-10 border-b border-black border-dashed dark:border-white">
+      <div ref={homeRef} className="p-4 lg:p-10 border-b border-black dark:border-white">
         <h1 className="dark:text-white text-4xl md:text-5xl lg:text-7xl pb-16 pt-16 text-center font-mono ">Hey, I'm Zach!</h1>
         <h2 className="dark:text-white text-1xl md:text-3xl lg:text-4xl pb-10 text-center font-mono">I'm a software developer, with a speciality in quantum computing</h2>
 
@@ -62,7 +35,7 @@ export default function Home() {
         {/* <p className="dark:text-white text-l font-mono text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam, quam id tincidunt tincidunt, nunc nisl ultrices nunc, id lacinia nunc nunc id velit. Nulla facilisi. Sed auctor, nunc id aliquet luctus, nisl nunc tincidunt nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc.</p> */}
       </div>
 
-      <div ref={projectsRef} id="projects" className="p-4 lg:p-10 scroll-m-10 border-b border-black border-dashed dark:border-white">
+      <div ref={projectsRef} id="projects" className="py-4 lg:py-10 scroll-m-10 border-b border-black dark:border-white">
         <h1 className="text-3xl font-mono pb-5 text-center dark:text-white">
           <a href="#Projects">Projects</a>
         </h1>
@@ -74,7 +47,7 @@ export default function Home() {
       </div>
       
 
-      <div ref={blogRef} id="blog" className="p-4 lg:p-10 scroll-m-10 border-b border-black border-dashed dark:border-white">
+      <div ref={blogRef} id="blog" className="p-4 lg:p-10 scroll-m-10 border-b border-black  dark:border-white">
         <h1 className="text-3xl font-mono pb-5 text-center dark:text-white">
           <a href="#Blog">Blog</a>
         </h1>
