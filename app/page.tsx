@@ -1,10 +1,51 @@
 'use client'
 import Navbar from "@/components/navbar";
 import ProjectCard from "@/components/ProjectCard";
+import { allPosts, Post } from "contentlayer/generated";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import { useRef } from 'react';
 import projects from "@/data/projects";
 
+function BlogEntry(post: Post) {
+  return (
+    <a href={post.url} className="my-4 p-2 hover:bg-slate-700 block rounded-lg">
+      <div className="flex justify-between items-center">
+        <h2 className="text-xl dark:text-white font-mono">
+          {post.title}
+        </h2>
+        <time dateTime={post.date} className="block mb-2 text-sm text-gray-700 dark:text-gray-500">
+          {new Date(post.date).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}
+        </time>
+      </div>
+      
+      <div className="text-sm text-left dark:text-gray-400">
+        {post.summary}
+      </div>
+
+      
+    </a>
+  );
+
+}
+
+function Blogs() {
+  return (
+    <div>
+      <ul>
+        {allPosts.map((post) => (
+          <BlogEntry key={post.url} {...post} />
+          // <li key={post.url}>
+          //   <a href={post.url}>{post.title}</a>
+          //   <p>{post.summary}</p>
+          //   <h2 className="text-xl text-gray-900 dark:text-white font-mono ">{post.title}</h2>
+          //   <p className="text-gray-700 dark:text-gray-400 font-mono">{post.summary}</p>
+          // </li>
+          
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default function Home() {
   
@@ -47,9 +88,10 @@ export default function Home() {
       </div>
       
 
-      <div ref={blogRef} id="blog" className="p-4 lg:p-10 scroll-m-10 border-b border-black  dark:border-white">
+      <div ref={blogRef} id="blog" className="py-4 lg:py-10 scroll-m-10 border-b border-black  dark:border-white">
         <h1 className="text-3xl font-mono pb-5 text-center dark:text-white">
           <a href="#Blog">Blog</a>
+          <Blogs />
         </h1>
       </div>
       
