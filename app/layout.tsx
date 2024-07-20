@@ -22,7 +22,10 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
         <ThemeProvider attribute="class">
           <Analytics />
           <SpeedInsights />
-          {children}
+          <div className="mt-[--header-height] h-screen max-w-4xl m-auto p-4">
+            {children}
+          </div>
+          
         </ThemeProvider>
       </body>
     </html>

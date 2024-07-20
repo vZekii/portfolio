@@ -34,13 +34,6 @@ function Blogs() {
       <ul>
         {allPosts.map((post) => (
           <BlogEntry key={post.url} {...post} />
-          // <li key={post.url}>
-          //   <a href={post.url}>{post.title}</a>
-          //   <p>{post.summary}</p>
-          //   <h2 className="text-xl text-gray-900 dark:text-white font-mono ">{post.title}</h2>
-          //   <p className="text-gray-700 dark:text-gray-400 font-mono">{post.summary}</p>
-          // </li>
-          
         ))}
       </ul>
     </div>
@@ -55,7 +48,7 @@ export default function Home() {
   const contactRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className="mt-[--header-height] h-screen max-w-4xl m-auto">
+    <div className="">
       <Navbar homeRef={homeRef} projectRef={projectsRef} blogRef={blogRef} contactRef={contactRef}/>
       <div ref={homeRef} className="p-4 lg:p-10 border-b border-black dark:border-white">
         <h1 className="dark:text-white text-4xl md:text-5xl lg:text-7xl pb-16 pt-16 text-center font-mono ">Hey, I'm Zach!</h1>
@@ -101,7 +94,7 @@ export default function Home() {
           <a href="#Contact">Contact</a>
         </h1>
         <p className="font-mono mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Want to chat? Send me a message below.</p>
-          <form action="#" className="space-y-8 m-2">
+          <form action="#" className="space-y-8">
             <div>
               <label htmlFor="email" className="font-mono block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
               <input type="email" id="email" className="font-mono shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@email.com" required />
