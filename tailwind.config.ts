@@ -88,6 +88,6 @@ const config: Config = {
       'mono': ['var(--font-source-code-pro)', 'SFMono-Regular'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
 export default config;
