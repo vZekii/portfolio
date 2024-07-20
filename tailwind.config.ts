@@ -83,7 +83,7 @@ const config: Config = {
       },
     },
     fontFamily: {
-      'sans': ['var(--font-inter)', 'ui-sans-serif', 'system-ui'],
+      'sans': ['ui-sans-serif', 'system-ui'],
       'serif': ['ui-serif', 'Georgia'],
       'mono': ['var(--font-source-code-pro)', 'SFMono-Regular'],
     },
