@@ -34,7 +34,7 @@ export default function Home() {
   );
 
   return (
-    <div className="mt-[--header-height] h-screen max-w-7xl m-auto">
+    <div>
       <Navbar />
       <h1 className="mb-8 text-3xl font-bold text-center font-mono">Blog</h1>
 

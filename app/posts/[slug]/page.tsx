@@ -22,7 +22,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   const Content = getMDXComponent(post.body.code)
 
   return (
-    <article className="prose dark:prose-invert font-mono py-8 mx-auto max-w-xl">
+    <article className="prose dark:prose-invert prose-headings:font-semibold font-mono mx-auto max-w-xl">
       <Navbar />
       <div className="my-8 text-center">
         <time dateTime={post.date} className="mb-1 text-xs text-gray-600" suppressHydrationWarning>
