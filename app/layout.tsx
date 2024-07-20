@@ -15,7 +15,7 @@ const sourceCodePro = Source_Code_Pro({
 })
 
 export const metadata: Metadata = {
-  title: "Zach's personal site",
+  title: "vzekii.tech",
   description: "A place for all my stuff",
 };
 
