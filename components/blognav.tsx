@@ -1,35 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { CubeIcon, SunIcon, MoonIcon, Bars3Icon } from '@heroicons/react/24/outline';
+import { useTheme } from 'next-themes'
 
 export default function Navbar() {
-    const [dark, setDark] = React.useState(false);
+    const { theme, setTheme } = useTheme();
 
     const darkModeHandler = () => {
-        setDark(!dark);
-        document.documentElement.classList.toggle("dark");
-    }
-
-    useEffect(() => {
-        const mq = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        );
-      
-        if (mq.matches) {
-          setDark(true);
-          document.documentElement.classList.add("dark");
+        if (theme === 'dark') {
+            setTheme('light');
+        } else {
+            setTheme('dark');
         }
-      
-        // This callback will fire if the perferred color scheme changes without a reload
-        mq.addEventListener("change", (evt) => {
-            setDark(evt.matches)
-            if (evt.matches) {
-                document.documentElement.classList.add("dark");
-            }
-            else {
-                document.documentElement.classList.remove("dark");
-            }
-        });
-      }, []);
+    }
 
     return (
         <header className="h-[--header-height] fixed top-0 left-0 right-0 border-b border-gray-200 bg-slate-50 dark:bg-slate-800 dark:border-slate-700">
@@ -45,7 +27,7 @@ export default function Navbar() {
             <div className='flex align-middle items-center h-full absolute top-0 right-0 pr-2'>
                 <button className='p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700' onClick={() => darkModeHandler()}>
                     {
-                        dark ? <MoonIcon className="size-5 dark:text-white" aria-label='dark mode'/> : <SunIcon className="size-5 dark:text-white" aria-label='light mode' />
+                        theme == "dark" ? <MoonIcon className="size-5 dark:text-white" aria-label='dark mode'/> : <SunIcon className="size-5 dark:text-white" aria-label='light mode' />
                     }
                 </button>
                 <button className='p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 md:hidden'>
