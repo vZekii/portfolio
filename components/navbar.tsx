@@ -19,14 +19,15 @@ export default function Navbar({ blogNav = false }: { blogNav?: boolean }) {
     };
 
     /* only activate the nice scrolling on the front page */
-    if (!blogNav) {
-        useEffect(() => {
+    // Moved useEffect outside of the conditional logic
+    useEffect(() => {
+        if (!blogNav) {
             const handleScroll = () => {
                 const sections = navItems.map(item => ({
                     id: item.id,
                     element: document.getElementById(item.id)
                 }));
-    
+
                 const scrollPosition = window.scrollY;
                 for (const { id, element } of sections) {
                     if (element) {
@@ -37,11 +38,12 @@ export default function Navbar({ blogNav = false }: { blogNav?: boolean }) {
                     }
                 }
             };
-    
+
             window.addEventListener('scroll', handleScroll);
             return () => window.removeEventListener('scroll', handleScroll);
-        }, [activeSection]);
-    }
+        }
+    }, [activeSection, blogNav]); // Added blogNav to dependency array
+
 
     return (
         <header className="h-[--header-height] fixed top-0 left-0 right-0 border-b border-gray-200 bg-slate-50 dark:bg-slate-800 dark:border-slate-700">
