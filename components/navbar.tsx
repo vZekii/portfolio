@@ -15,12 +15,8 @@ export default function Navbar({ blogNav = false }: { blogNav?: boolean }) {
 
 
     const darkModeHandler = () => {
-        if (theme === 'dark') {
-            setTheme('light');
-        } else {
-            setTheme('dark');
-        }
-    }
+        setTheme(theme === 'dark' ? 'light' : 'dark');
+    };
 
     /* only activate the nice scrolling on the front page */
     if (!blogNav) {
