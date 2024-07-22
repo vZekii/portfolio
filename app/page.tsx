@@ -41,26 +41,21 @@ function Blogs() {
 }
 
 export default function Home() {
-  
-  const homeRef = useRef<HTMLDivElement | null>(null);
-  const projectsRef = useRef<HTMLDivElement | null>(null);
-  const blogRef = useRef<HTMLDivElement | null>(null);
-  const contactRef = useRef<HTMLDivElement | null>(null);
 
   return (
     <div className="">
-      <Navbar homeRef={homeRef} projectRef={projectsRef} blogRef={blogRef} contactRef={contactRef}/>
-      <div ref={homeRef} className="p-4 lg:p-10 border-b border-black dark:border-white">
+      <Navbar />
+      <div id="home" className="p-4 lg:p-10 border-b border-black dark:border-white">
         <h1 className="dark:text-white text-4xl md:text-5xl lg:text-7xl pb-16 pt-16 text-center font-mono ">Hey, I'm Zach!</h1>
         <h2 className="dark:text-white text-1xl md:text-3xl lg:text-4xl pb-10 text-center font-mono">I'm a software developer, with a speciality in quantum computing</h2>
 
         <div className="justify-center items-center flex mt-5 pb-20">
-          <button className="mx-2 px-4 py-1 lg:text-lg rounded-full border-2 border-black dark:border-white font-mono dark:text-white hover:bg-black hover:dark:bg-white hover:text-white hover:dark:text-slate-800"
+          {/* <button className="mx-2 px-4 py-1 lg:text-lg rounded-full border-2 border-black dark:border-white font-mono dark:text-white hover:bg-black hover:dark:bg-white hover:text-white hover:dark:text-slate-800"
             onClick={() => {contactRef.current?.scrollIntoView({
               behavior: 'smooth',
             }); }}>
             Contact
-          </button>
+          </button> */}
           <button className="mx-2 px-4 py-1 lg:text-lg rounded-full border-2 border-black dark:border-white font-mono dark:text-white hover:bg-black hover:dark:bg-white hover:text-white hover:dark:text-slate-800">
             Resume
           </button>
@@ -69,7 +64,7 @@ export default function Home() {
         {/* <p className="dark:text-white text-l font-mono text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam, quam id tincidunt tincidunt, nunc nisl ultrices nunc, id lacinia nunc nunc id velit. Nulla facilisi. Sed auctor, nunc id aliquet luctus, nisl nunc tincidunt nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc.</p> */}
       </div>
 
-      <div ref={projectsRef} id="projects" className="py-4 lg:py-10 scroll-m-10 border-b border-black dark:border-white">
+      <div id="projects" className="py-4 lg:py-10 scroll-m-10 border-b border-black dark:border-white">
         <h1 className="text-3xl font-mono pb-5 text-center dark:text-white">
           <a href="#Projects">Projects</a>
         </h1>
@@ -81,7 +76,7 @@ export default function Home() {
       </div>
       
 
-      <div ref={blogRef} id="blog" className="py-4 lg:py-10 scroll-m-10 border-b border-black  dark:border-white">
+      <div id="blog" className="py-4 lg:py-10 scroll-m-10 border-b border-black  dark:border-white">
         <h1 className="text-3xl font-mono pb-5 text-center dark:text-white">
           <a href="#Blog">Blog</a>
           <Blogs />
@@ -89,7 +84,7 @@ export default function Home() {
       </div>
       
 
-      <div ref={contactRef} id="contact" className="p-4 lg:p-10 scroll-m-10 h-screen max-w-screen-md mx-auto">
+      <div id="contact" className="p-4 lg:p-10 scroll-m-10 h-screen max-w-screen-md mx-auto">
         <h1 className="text-3xl font-mono pb-5 text-center dark:text-white">
           <a href="#Contact">Contact</a>
         </h1>

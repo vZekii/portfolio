@@ -3,7 +3,7 @@ import { format, parseISO } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
 import { getMDXComponent } from 'next-contentlayer/hooks'
 import "app/globals.css";
-import Navbar from '@/components/blognav';
+import Navbar from "@/components/navbar";
 
 // export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
 
@@ -23,7 +23,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
 
   return (
     <article className="prose dark:prose-invert prose-headings:font-semibold font-mono mx-auto max-w-xl">
-      <Navbar />
+      <Navbar blogNav={true}/>
       <div className="my-8 text-center">
         <time dateTime={post.date} className="mb-1 text-xs text-gray-600" suppressHydrationWarning>
           {format(parseISO(post.date), 'LLLL d, yyyy')}

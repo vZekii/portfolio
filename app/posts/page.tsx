@@ -3,7 +3,7 @@ import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 import { getMDXComponent } from "next-contentlayer/hooks";
-import Navbar from '@/components/blognav';
+import Navbar from "@/components/navbar";
 
 function PostCard(post: Post) {
   const Content = getMDXComponent(post.body.code);
@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar blogNav={true}/>
       <h1 className="mb-8 text-3xl font-bold text-center font-mono">Blog</h1>
 
       {posts.map((post, idx) => (
