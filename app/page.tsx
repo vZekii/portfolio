@@ -1,5 +1,5 @@
 'use client'
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
 import { allPosts, Post } from "contentlayer/generated";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";

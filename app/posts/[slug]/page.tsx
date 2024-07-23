@@ -3,7 +3,7 @@ import { format, parseISO } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
 import { getMDXComponent } from 'next-contentlayer/hooks'
 import "app/globals.css";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 
 // export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
 
