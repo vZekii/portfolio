@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CubeIcon, SunIcon, MoonIcon, Bars3Icon } from '@heroicons/react/24/outline';
 import { useTheme } from 'next-themes'
 
+
 export default function Navbar({ blogNav = false }: { blogNav?: boolean }) {
     const { theme, setTheme } = useTheme();
     const [activeSection, setActiveSection] = useState('home');
@@ -13,10 +14,17 @@ export default function Navbar({ blogNav = false }: { blogNav?: boolean }) {
         { name: 'Contact', id: 'contact' },
     ];
 
-
+    // Handler for toggling dark mode
     const darkModeHandler = () => {
         setTheme(theme === 'dark' ? 'light' : 'dark');
     };
+
+    // Theme can be undefined at the start which is annoying, so define it here
+    useEffect(() => {  
+        if (theme == undefined) {
+            setTheme('dark');
+        }
+    });
 
     /* only activate the nice scrolling on the front page */
     // Moved useEffect outside of the conditional logic
