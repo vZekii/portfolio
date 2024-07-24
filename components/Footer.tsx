@@ -1,6 +1,6 @@
 'use client'
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
-import React, { useState, useEffect, use } from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 
 export default function Footer() {
@@ -8,7 +8,7 @@ export default function Footer() {
 
     useEffect(() => {
         const toggleVisibility = () => {
-            if (window.pageYOffset > 300) {
+            if (window.scrollY > 300) {
                 setIsScrollUpVisible(true);
             } else {
                 setIsScrollUpVisible(false);
