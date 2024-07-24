@@ -20,6 +20,34 @@ export const metadata: Metadata = {
     template: `%s | ${siteMetadata.title}`,
   },
   description: siteMetadata.description,
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: './',
+    siteName: siteMetadata.title,
+    images: [
+      {
+        url: new URL(siteMetadata.banner, siteMetadata.url).href,
+        width: 1200,
+        height: 630,
+        alt: siteMetadata.title,
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+    }
+  },
+  twitter: {
+    title: siteMetadata.title,
+    card: 'summary_large_image',
+    images: [siteMetadata.banner],
+  },
 };
 
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
