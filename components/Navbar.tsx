@@ -82,10 +82,6 @@ export default function Navbar({ blogNav = false }: { blogNav?: boolean }) {
                         theme == "dark" ? <MoonIcon className="size-5 dark:text-white" aria-label='dark mode'/> : <SunIcon className="size-5 dark:text-white" aria-label='light mode' />
                     }
                 </button>
-                <button className='p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 md:hidden'>
-                    <Bars3Icon className="size-5 dark:text-white" aria-label='open menu' />
-                </button>
-
             </div>
         </header>
     );
