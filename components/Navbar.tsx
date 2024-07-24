@@ -54,10 +54,12 @@ export default function Navbar({ blogNav = false }: { blogNav?: boolean }) {
 
     return (
         <header className="h-[--header-height] fixed top-0 left-0 right-0 border-b border-gray-200 bg-slate-50 dark:bg-slate-800 dark:border-slate-700">
-            <div className='flex self-start h-full absolute align-middle items-center pl-2'>
-                <CubeIcon className="dark:text-white size-5" />
-                <p className='align-middle pl-2 dark:text-white font-mono'>Zach Clare</p>
-            </div>
+            <a href='/'>
+                <div className='flex self-start h-full absolute align-middle items-center pl-2'>
+                    <CubeIcon className="dark:text-white size-5" />
+                    <p className='align-middle pl-2 dark:text-white font-mono'>Zach Clare</p>
+                </div>
+            </a>
 
             <nav className='align-middle justify-center items-center h-full space-x-1 hidden md:flex font-mono'>
                 {
