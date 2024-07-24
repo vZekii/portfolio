@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 const sourceCodePro = Source_Code_Pro({
   subsets: ['latin'],
   variable: '--font-source-code-pro',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="en" className={`${sourceCodePro.variable} scroll-smooth`} suppressHydrationWarning>
-      <body className="bg-slate-50 dark:bg-slate-800">
+      <body className="bg-slate-50 dark:bg-slate-800 antialiased">
         <ThemeProvider attribute="class">
           <Analytics />
           <SpeedInsights />
