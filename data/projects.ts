@@ -11,7 +11,7 @@ const projects = [
       "title": "vzekii.tech",
       "tags": ["Web Development", "Typescript", "Next.js", "TailwindCSS", "Vercel"],
       "description": "The very website that you're browsing this on. Built with Next.js, Typescript, TailwindCSS and deployed on Vercel, this is a showcase of my skills and projects.",
-      "image": "/images/smartwardrobe.png",
+      "image": "/images/banner.png",
       "link": "https://github.com/vZekii/portfolio"
     },{
       "id": 3,
