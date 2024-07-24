@@ -65,7 +65,7 @@ export default function Navbar({ blogNav = false }: { blogNav?: boolean }) {
                 {
                     !blogNav ? 
                     navItems.map((navItem) => (
-                        <a key={navItem.name} href={`#${navItem.id}`} className={`text-sm rounded-full px-3 py-1 ${activeSection === navItem.id ? 'font-bold bg-black dark:bg-white text-white dark:text-black' : 'font-light hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-white'}`}>
+                        <a key={navItem.name} href={`#${navItem.id}`} className={`text-sm rounded-full px-3 py-1 transition-colors ${activeSection === navItem.id ? 'font-bold bg-black dark:bg-white text-white dark:text-black' : 'font-light hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-white'}`}>
                             {navItem.name}
                         </a>
                     ))
@@ -75,7 +75,7 @@ export default function Navbar({ blogNav = false }: { blogNav?: boolean }) {
                 }
             </nav>
             <div className='flex align-middle items-center h-full absolute top-0 right-0 pr-2'>
-                <button className='p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700' 
+                <button className='p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors' 
                 onClick={() => darkModeHandler()}
                 >
                     {
