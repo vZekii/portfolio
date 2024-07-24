@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Source_Code_Pro } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ['latin'],
@@ -22,9 +23,11 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
         <ThemeProvider attribute="class">
           <Analytics />
           <SpeedInsights />
-          <div className="mt-[--header-height] h-screen max-w-4xl m-auto p-4">
+          <div className="mt-[--header-height] max-w-4xl m-auto p-4">
             {children}
+            <Footer />
           </div>
+          
           
         </ThemeProvider>
       </body>
