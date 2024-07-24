@@ -50,18 +50,10 @@ export default function Home() {
         <h2 className="dark:text-white text-1xl md:text-3xl lg:text-4xl pb-10 text-center font-mono">I'm a software developer, with a speciality in quantum computing</h2>
 
         <div className="justify-center items-center flex mt-5 pb-20">
-          {/* <button className="mx-2 px-4 py-1 lg:text-lg rounded-full border-2 border-black dark:border-white font-mono dark:text-white hover:bg-black hover:dark:bg-white hover:text-white hover:dark:text-slate-800"
-            onClick={() => {contactRef.current?.scrollIntoView({
-              behavior: 'smooth',
-            }); }}>
-            Contact
-          </button> */}
           <button className="mx-2 px-4 py-1 lg:text-lg rounded-full border-2 border-black dark:border-white font-mono dark:text-white hover:bg-black hover:dark:bg-white hover:text-white hover:dark:text-slate-800">
             Resume
           </button>
         </div>
-
-        {/* <p className="dark:text-white text-l font-mono text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam, quam id tincidunt tincidunt, nunc nisl ultrices nunc, id lacinia nunc nunc id velit. Nulla facilisi. Sed auctor, nunc id aliquet luctus, nisl nunc tincidunt nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc. Sed euismod, nunc id aliquam aliquam, nunc nunc aliquam nunc, id aliquam nunc nunc ac nunc.</p> */}
       </div>
 
       <div id="projects" className="py-4 lg:py-10 scroll-m-10 border-b border-black dark:border-white">

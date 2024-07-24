@@ -5,13 +5,6 @@ import { getMDXComponent } from 'next-contentlayer/hooks'
 import "app/globals.css";
 import Navbar from "@/components/Navbar";
 
-// export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
-
-// export const generateMetadata = ({ params }) => {
-//   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
-//   return { title: post.title }
-// }
-
 const PostLayout = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
   
