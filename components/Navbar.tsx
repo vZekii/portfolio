@@ -49,7 +49,7 @@ export default function Navbar({ blogNav = false }: { blogNav?: boolean }) {
             window.addEventListener('scroll', handleScroll);
             return () => window.removeEventListener('scroll', handleScroll);
         }
-    }, [activeSection, blogNav]); // Added blogNav to dependency array
+    }, [activeSection, blogNav, navItems]); // Added blogNav to dependency array
 
 
     return (
