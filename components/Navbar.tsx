@@ -11,7 +11,6 @@ export default function Navbar({ blogNav = false }: { blogNav?: boolean }) {
         { name: 'Home', id: 'home' },
         { name: 'Projects', id: 'projects' },
         { name: 'Blog', id: 'blog' },
-        { name: 'Contact', id: 'contact' },
     ];
 
     // Handler for toggling dark mode
