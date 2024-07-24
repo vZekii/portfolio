@@ -21,5 +21,3 @@ Here is a list of the technologies utilized to construct this website:
 | Analytics       | [Vercel Analytics](https://vercel.com/docs/analytics)                           |
 | Graphics        | [Figma](https://www.figma.com/)                                                 |
 | Icons           | [Hero Icons](https://heroicons.com/) + [Simple Icons](https://simpleicons.org/) |
-
----
