@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: { project: any }) {
                     className=' rounded-t-lg object-fit object-center'
                 />
                 <div className='p-6 flex flex-col justify-between leading-normal'>
-                    <h2 className="text-xl text-gray-900 dark:text-white font-mono ">{project.title}</h2>
+                    <h2 className="text-2xl text-gray-900 dark:text-white font-mono">{project.title}</h2>
                     <Tags tags={project.tags} />
                     <p className="text-gray-700 dark:text-gray-400 font-mono">{project.description}</p>
                 </div>

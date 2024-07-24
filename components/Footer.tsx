@@ -1,7 +1,25 @@
+'use client'
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
-import React from "react";
+import React, { useState, useEffect, use } from "react";
+import { ArrowUpIcon } from "@heroicons/react/24/outline";
 
 export default function Footer() {
+    const [isScrollUpVisible, setIsScrollUpVisible] = useState(false);
+
+    useEffect(() => {
+        const toggleVisibility = () => {
+            if (window.pageYOffset > 300) {
+                setIsScrollUpVisible(true);
+            } else {
+                setIsScrollUpVisible(false);
+            }
+        };
+
+        window.addEventListener('scroll', toggleVisibility);
+
+        return () => window.removeEventListener('scroll', toggleVisibility);
+    }, []);
+
     return (
         <footer className="border-t border-gray-200 bg-slate-50 dark:bg-slate-800 dark:border-slate-700">
             <div>
@@ -20,6 +38,17 @@ export default function Footer() {
             <div className="flex flex-col items-center mt-4 pb-3">
                 <p className="flex text-sm dark:text-white font-mono text-center">© Zach Clare 2024</p>
             </div>
+
+            {isScrollUpVisible && (
+                <button className="fixed right-5 bottom-5 dark:text-white p-3 rounded-md bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" onClick={() => {
+                    window.scroll({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }}>
+                    <ArrowUpIcon className="size-5" aria-label="to top"/>
+                </button>
+            )}
         </footer>
     );
 }
